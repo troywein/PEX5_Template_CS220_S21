@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "cl.exe",
+            "args": [
+                "/W4",
+                "/Zi",
+                "/EHsc",
+                "/Fe:",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\*.c"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
